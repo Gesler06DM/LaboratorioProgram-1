@@ -20,11 +20,28 @@ al dividir esas tareas hace que el programa tenga un mejor orden dividiéndolo p
 # variables locales vs variables globales 
 
 -1. ¿Qué variables deberían declararse como globales (atributos static de la clase)?
-las variables que se declaran como globales son: 
+las variables que se declaran como globales son:
+Las variables que deberían declararse como globales en el programa son:
+List<String> estudiantes
+List<Double> calificaciones
+Scanner scanner
+Estas variables se declararon como atributos static de la clase, porque deben ser utilizadas por varios métodos del programa, como por ejemplo:
+estudianteAgregar()
+estudianteLista()
+estudianteCalprom()
+estudianteMaxcalificacion()
+Al declararlas como globales, todos los métodos pueden acceder a la misma lista de estudiantes y calificaciones, permitiendo que la información se mantenga guardada durante la ejecución del programa.
 
 -2. ¿Cuáles deberían ser locales dentro de un método?
-
+Las variables que deberían ser locales dentro de los métodos son aquellas que solo se utilizan temporalmente dentro de una operación específica, por ejemplo:
+	String nombre, double calificacion, double suma, double promedio, double maxCalificacion, String estudianteMax.
+Estas variables solo son necesarias mientras se ejecuta una parte específica del programa, como ingresar datos, calcular el promedio o encontrar la calificación más alta.
 -3.¿Por qué?
+Las variables se dividen entre globales y locales para organizar mejor el programa y evitar errores.
+Las variables globales se utilizan cuando la información debe ser compartida entre varios métodos del programa. En este caso, las listas de estudiantes y calificaciones deben mantenerse disponibles para agregar datos, mostrarlos, calcular promedios y encontrar la calificación más alta.
+
+Por otro lado, las variables locales solo se usan dentro de un método específico y desaparecen cuando ese método termina. 
+De esta manera, el programa queda mejor estructurado y cada variable cumple únicamente la función que le corresponde.
 
 # ¿Qué ventajas tiene dividir el código en métodos?
 las ventajas que nos puede dar hacer el programa didivido en metodos es la organizacion que cada una da sin tener todo junto en uno mismo
